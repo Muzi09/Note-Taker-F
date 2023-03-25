@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#back {
+    background-color: blue;
+}
+
+.log-in {
+    
+    border: none;
+    border-radius: 3em;
+    font-size: xx-large;
+    color: whitesmoke;
+    width: 8em;
+    height: 1.5em;
+    position: relative;
+    top: 9em;
+    right: 7em;
+    background-color: blue;
+
+}
+
+
+#signup-:hover {
+    color: red;
+}
+
+#signup- {
+    border: none;
+    font-size: large;
+}
+
+
+p {
+    font-size: large;
+    position: relative;
+    top: 18em;
+    left: 15em;
+}
+
+#message-login {
+    
+    font-size: larger;
+    color: red;
+    position: relative;
+    top: 8.5em;
+    left: 7.7em;
+}

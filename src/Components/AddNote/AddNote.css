@@ -1,0 +1,64 @@
+.title {
+    color: black;  
+    font-size: larger;
+    position: relative;
+    left: 5em;
+    bottom: 7em;
+    
+}
+
+.desc {
+    color: black;
+    font-size: larger;
+    position: relative;
+    bottom: 2em;
+    right: 26.8em;
+}   
+
+
+.title-input {
+    border: none;
+    width: 30em;
+    height: 1.4em;
+    position: relative;
+    left: 3.2em;    
+    bottom: 5em;
+    color: black;
+    border-radius: 5px;
+
+}
+
+.desc-input {
+    border: none;
+    position: relative;
+    right: 45.8em;
+    top: 19em;
+    color: black;
+    border-radius: 5px;
+    height: 20em;
+    width: 44em;
+    background-color: whitesmoke;
+    padding: 5px;
+
+}
+
+
+#submit-note{
+    font-size: larger;
+    position: relative;
+    left: 5em;
+    top: 14em;
+    background-color: gray;
+    width: 6em;
+    height: 1.5em;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+#saved {
+    color: green;
+    font-size: larger;
+    position: relative;
+    left: 5em;
+    bottom: 14em;
+}
