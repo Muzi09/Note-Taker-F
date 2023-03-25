@@ -17,7 +17,7 @@ const Login = () => {
     }
 
     const handleSubmit = () => {
-        axios.post('http://localhost:3001/login', user)
+        axios.post('https://note-taker-b.onrender.com/login', user)
             .then((res) => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.token)

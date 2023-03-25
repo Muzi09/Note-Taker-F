@@ -21,7 +21,7 @@ const Signup = () => {
 
 
     const handleSubmit = () => {
-        axios.post('http://localhost:3001/signup', user)
+        axios.post('https://note-taker-b.onrender.com/signup', user)
         .then((res) => {
             console.log(res.data.message)
             navigate('/')

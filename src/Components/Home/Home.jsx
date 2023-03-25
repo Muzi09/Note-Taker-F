@@ -28,7 +28,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3001/notes', {
+        axios.get('https://note-taker-b.onrender.com/notes', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -45,7 +45,7 @@ const Home = () => {
 
     
     const handleDelete = async () => {
-        await axios.delete('http://localhost:3001/deleteall', {
+        await axios.delete('https://note-taker-b.onrender.com/deleteall', {
             headers: {
                 Authorization: `Bearer ${token}`
             }

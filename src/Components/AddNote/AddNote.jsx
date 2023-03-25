@@ -22,7 +22,7 @@ const AddNote = () => {
         try {
             const token = localStorage.getItem('token')
 
-            await axios.post('http://localhost:3001/addnote', note, {
+            await axios.post('https://note-taker-b.onrender.com/addnote', note, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
