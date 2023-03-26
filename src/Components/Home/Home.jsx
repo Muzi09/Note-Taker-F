@@ -2,6 +2,8 @@ import '../Home/Home.css'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import timeimg from '../../assets/kindpng_101535.png'
+import titleimg from '../../assets/2799932.png'
 
 const Home = () => {
 
@@ -13,9 +15,6 @@ const Home = () => {
     const navigate = useNavigate()
     const token = localStorage.getItem('token')
 
-
-    console.log(search)
-    console.log(notes)
 
     const handleSearch = async (e) => {
         setSearch(e.target.value)
@@ -66,13 +65,24 @@ const Home = () => {
     } 
 
 
-    const handleDeleteOne = (key) => {
-        let obj = notes[key]
-        let title = obj.title
 
-        console.log(title)
+    const handleDeleteOne = async (key) => {
+        let note = notes[key]
+        let titleToDelete = note.title
+        console.log(titleToDelete)
 
-        // To be continued
+
+        axios.post('https://note-taker-b.onrender.com/deleteone', note, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+        .then((res) => {
+            setDeleted(deleted + 1)
+        })
+        .catch((err) => {
+            console.log(err.response.data.message)
+        })
 
     }
 
@@ -91,9 +101,12 @@ const Home = () => {
             {notes.map((item, key) => {
                 return (
                     <div id='note'>
+                        <img id="time" src={timeimg}/>
+                        <img id='title-img' src={titleimg} />
+                        <div id='date' key={item.key}>{item.date}</div>
                         <h1 id='note-title' key={item.key}>{item.title}</h1>
                         <h5 id='note-desc' key={item.key}>{item.description}</h5>
-                        <button id='delete-note' key={item.key} onClick={handleDeleteOne(key)}>Delete</button>
+                        <button id='delete-note' key={item.key} onClick={() => {handleDeleteOne(key)}} >Delete</button>
                         <button id='update-note' key={item.key}>Update</button>
 
                     </div>

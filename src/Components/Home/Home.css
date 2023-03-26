@@ -1,7 +1,8 @@
 .main-div {
     background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
     width: 100%;
-    height: 100em;
+    min-height: 100vh;
+    padding-bottom: 10em;
 }
 
 nav {
@@ -33,18 +34,20 @@ nav {
 }
 
 #note {
+    box-sizing: border-box;
     width: 75%;
-    height: 14em;
     background-color: whitesmoke;
     margin: auto;
     margin-top: 1em;
     border: 1px solid black;
     border-radius: 1em;
+    padding-bottom: 9em;
+    overflow: auto; 
 }
 
 #note-title {
     color: darkslategray;
-    padding-left: 1em;
+    padding-left: 1.1em;
     padding-top: 5px
 }
 
@@ -52,6 +55,8 @@ nav {
     color: black;
     padding-left: 2.5em;
     padding-top: 5px;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 .logout {
@@ -77,6 +82,10 @@ nav {
     top: 10em;
 }
 
+#delete-note:hover {
+    color: skyblue;
+}
+
 #update-note {
     color: whitesmoke;
     background-color: navy;
@@ -86,4 +95,30 @@ nav {
     position: relative;
     left: 1em;
     top: 10em;
+}
+
+#update-note:hover {
+    color: skyblue;
+}
+
+#date {
+    padding-left: 2em;
+}
+
+
+#time {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    left: 10px;
+    top: 20px;
+}
+
+#title-img {
+    width: 1.4em;
+    height: 1.4em;
+    position: relative;
+    top: 3.6em;
+    right: 10px;
+
 }

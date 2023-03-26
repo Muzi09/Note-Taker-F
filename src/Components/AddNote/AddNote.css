@@ -55,6 +55,10 @@
     color: whitesmoke;
 }
 
+#submit-note:hover {
+    color: skyblue;
+}
+
 #saved {
     color: green;
     font-size: larger;
