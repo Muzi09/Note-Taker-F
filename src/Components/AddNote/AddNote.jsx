@@ -31,6 +31,7 @@ const AddNote = () => {
                 setTitle('')
                 setDescription('')
                 setMessage('Note Saved Successfully')
+                navigate('/Home')
             })
             .catch((err) => {
                 setMessage(err.response.data.message)
