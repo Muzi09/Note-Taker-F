@@ -33,7 +33,7 @@
 }
 
 
-p {
+#create-acc {
     font-size: large;
     position: relative;
     top: 18em;
@@ -47,4 +47,11 @@ p {
     position: relative;
     top: 8.5em;
     left: 7.7em;
+}
+
+#wait {
+    position: fixed;
+    left: 17em;
+    color: darkblue;
+    z-index: 2;
 }

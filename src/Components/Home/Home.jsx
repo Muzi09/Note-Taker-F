@@ -8,19 +8,18 @@ import titleimg from '../../assets/2799932.png'
 const Home = () => {
 
     let [notes, setNotes] = useState([])
-    let [search, setSearch] = useState("")
     let [deleted, setDeleted] = useState(1)
     let [message, setMessage] = useState('')
+    let [notesToFilter, setNotesToFilter] = useState([])
 
     const navigate = useNavigate()
     const token = localStorage.getItem('token')
 
 
     const handleSearch = async (e) => {
-        setSearch(e.target.value)
 
-        setNotes(notes.filter((note) => {
-            return note.title.toLowerCase().includes(search.toLocaleLowerCase())
+        setNotes(notesToFilter.filter((note) => {
+            return note.title.toLowerCase().includes(e.target.value.toLocaleLowerCase())
         }))
     }
 
@@ -34,6 +33,7 @@ const Home = () => {
         })
             .then((res) => {
                 setNotes(res.data.data)
+                setNotesToFilter(res.data.data)
             })
             .catch((err) => {
                 console.log(err.response.data.message)

@@ -32,12 +32,13 @@ const Login = () => {
 
     return (
         <div id='back'>
+            <p id='wait'>Please wait 10 seconds for website to work. When entering website for the first time</p>
             <div className='container'>
                 <h1 className='sign-up'>Sign In</h1>
                 <input type="email" className='email' placeholder='EMAIL' onChange={(e) => { setEmail(e.target.value) }} />
                 <input type="password" className='password' placeholder='PASSWORD' onChange={(e) => { setPassword(e.target.value) }} />
                 <button className='log-in' onClick={handleSubmit}>Log In</button>
-                <p>Dont have account <button id='signup-' onClick={() => { navigate('/signup') }}>Sign Up</button></p>
+                <p id='create-acc'>Dont have account <button id='signup-' onClick={() => { navigate('/signup') }}>Sign Up</button></p>
 
                 
                 {warning == true ? <div id='message-login'>{message}</div> : <div></div>}
